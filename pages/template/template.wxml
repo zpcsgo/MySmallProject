@@ -1,0 +1,5 @@
+<template name="msgItem">
+  <view class='text'>
+      <image src='{{url}}' class='image'></image>
+  </view>
+</template>

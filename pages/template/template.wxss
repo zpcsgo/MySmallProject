@@ -1,0 +1,13 @@
+/* pages/template/template.wxss */
+.text{
+  display: block;
+  background: white;
+  width: 98%;
+  height: 200rpx;
+  margin-top: 20rpx;
+  box-shadow: 2rpx 2rpx 3rpx 2rpx  rgba(00, 00, 00, .5);
+}
+.image{
+  width: 200rpx;
+  height: 200rpx;
+}

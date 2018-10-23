@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<import src="../template/template.wxml"/>
+<view class="container">
+  <block wx:for="{{imageUrl}}">
+   <template is="msgItem" data="{{...item}}"/>
+  </block>
+</view>
