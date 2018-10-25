@@ -8,12 +8,13 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
+	"libVersion": "2.3.0",
 	"appid": "wxceb6b864798c9a72",
-	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"projectname": "%E6%B5%8B%E8%AF%95%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

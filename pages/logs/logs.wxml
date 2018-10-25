@@ -1,6 +1,11 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<import src="../../wxParse/wxParse.wxml"/>
+ 
+<view class='page'>
+  <view class='page__title dk-title'>显示html格式</view>
+  <view class="page__bd page__bd_spacing">
+    <view class='dk-show'>
+      <template is="wxParse" data="{{wxParseData:html.nodes}}"/>
+    </view>
+    <canvas canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+  </view>
 </view>

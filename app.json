@@ -1,13 +1,31 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/template/template"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3399FF",
+    "navigationBarBackgroundColor": "#E4393C",
     "navigationBarTitleText": "ZPCSGO",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#E4393C",
+    "color":"#cccccc",
+    "list": [
+      {
+
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_selected.png"
+      }
+    ]
   }
 }

@@ -1,5 +1,4 @@
 /**index.wxss**/
-@import  "../template/template.wxss";
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -19,4 +18,12 @@
 
 .usermotto {
   margin-top: 200px;
+}
+.bottom_bar{
+  height: 120rpx;
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  display: flex;
 }

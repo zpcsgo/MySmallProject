@@ -1,23 +1,16 @@
 //app.js
 App({
-  onLaunch: function() {
+  onLaunch: function () {
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (res.code) {
-          //发起网络请求
-          wx.request({
-            url: "http://localhost:50563/api/System/WeChatLogin?code=" + res.code,
-            method: "POST",
-            dataType: "application/x-www-form-urlencoded",
-            success: function (result) {
-              this.globalData.openId=result;
-            }
-          })
-        } else {
-
-        }
+        
       }
     })
     // 获取用户信息
@@ -29,16 +22,12 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-              
+
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
-              
-              //获取用户信息后  登录本系统
-             
-
             }
           })
         }
@@ -46,8 +35,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    userSelf:null,//用户在本小程序的基本信息，
-    openid:""
+    userInfo: null
   }
 })

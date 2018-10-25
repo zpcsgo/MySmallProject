@@ -7,29 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    imageUrl: [{
-        url: "../images/1.jpg"
-      },
-      {
-        url: "../images/2.jpg"
-      },
-      {
-        url: "../images/3.jpg"
-      },
-      {
-        url: "../images/4.jpg"
-      },
-      {
-        url: "../images/5.jpg"
-      },
-      {
-        url: "../images/6.jpg"
-      },
-      {
-        url: "../images/7.jpg"
-      },
-    ]
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
@@ -37,17 +15,13 @@ Page({
       url: '../logs/logs'
     })
   },
-  Test: function() {
-
-    console.log("测试点击");
-  },
-  onLoad: function() {
+  onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse) {
+    } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
